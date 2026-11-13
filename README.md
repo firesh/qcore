@@ -11,8 +11,6 @@ qore is a fast, dependency-free QR code reader for Go. It detects and decodes mu
 | Go and desktop CLI | [qore release](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
 | Android and iOS | [Mobile SDK](https://github.com/firesh/qcore-mobile/releases/tag/v1.0.0) | v1.0.0 · core v1.0.0 |
 
-Flutter and React Native are planned to use the native SDK. WeChat Mini Program support is pending runtime validation.
-
 ## Quick start
 
 From a local checkout, with Go 1.23.6 or later:
