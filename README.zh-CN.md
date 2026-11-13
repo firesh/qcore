@@ -9,7 +9,7 @@ qore 是一个快速、零第三方依赖的 Go 二维码读取库。它可以�
 | 平台 | 下载 | 版本 |
 | --- | --- | --- |
 | Go 与桌面 CLI | [qore 发布页](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
-| Android 与 iOS | [移动 SDK 预览版](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.2) | v0.1.0-preview.2 · 核心 v1.0.0 |
+| Android 与 iOS | [移动 SDK](https://github.com/firesh/qcore-mobile/releases/tag/v1.0.0) | v1.0.0 · 核心 v1.0.0 |
 
 Flutter 和 React Native 计划复用原生 SDK。微信小程序待验证运行方案。
 
