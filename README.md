@@ -9,7 +9,7 @@ qore is a fast, dependency-free QR code reader for Go. It detects and decodes mu
 | Platform | Package | Version |
 | --- | --- | --- |
 | Go and desktop CLI | [qore release](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
-| Android and iOS | [Mobile SDK preview](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.1) | v0.1.0-preview.1 · core v1.0.0 |
+| Android and iOS | [Mobile SDK preview](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.2) | v0.1.0-preview.2 · core v1.0.0 |
 
 Flutter and React Native are planned to use the native SDK. WeChat Mini Program support is pending runtime validation.
 
@@ -38,7 +38,7 @@ In Go, call `qore.Decode(img, nil)` for one QR code or `qore.DecodeAll(img, nil)
 
 On the Apple M3 Max benchmark machine, qore averaged **7.95 ms/image** on the synthetic set and **19.18 ms/image** on the BoofCV location set. Timings exclude file loading and image decompression.
 
-See the [four-engine benchmark](benchmark/results/comparison_summary.md) for mean latency, scoring, and results by dataset. The [synthetic HTML report](benchmark/synthetic/results/report.html) includes per-scenario results and failure images when the dataset is available locally. [Reproduction instructions](benchmark/README.md) list the dependencies and commands.
+See the [four-engine benchmark](benchmark/results/comparison_summary.md) for mean latency, scoring, and results by dataset. The [synthetic HTML report](https://firesh.github.io/qcore/benchmark/) includes per-scenario results and failure images. [Reproduction instructions](benchmark/README.md) list the dependencies and commands.
 
 ## License
 

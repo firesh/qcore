@@ -9,7 +9,7 @@ qore は、高速で外部依存のない Go 製 QR コードリーダーです�
 | プラットフォーム | ダウンロード | バージョン |
 | --- | --- | --- |
 | Go とデスクトップ CLI | [qore リリース](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
-| Android と iOS | [モバイル SDK プレビュー](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.1) | v0.1.0-preview.1 · コア v1.0.0 |
+| Android と iOS | [モバイル SDK プレビュー](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.2) | v0.1.0-preview.2 · コア v1.0.0 |
 
 Flutter と React Native はネイティブ SDK を利用する予定です。WeChat ミニプログラムは実行環境の検証が必要です。
 
@@ -38,7 +38,7 @@ Go API は `image.Image` を受け取ります。1 件の読み取りには `qor
 
 Apple M3 Max での平均処理時間は、合成画像で **7.95 ms/枚**、BoofCV の位置検出セットで **19.18 ms/枚**でした。ファイルの読み込みと画像の展開は計測対象外です。
 
-平均処理時間、評価方法、データセット別の結果は[比較レポート](benchmark/results/comparison_summary.md)にあります。[合成画像の HTML レポート](benchmark/synthetic/results/report.html)ではシナリオ別の結果を確認でき、データセットがローカルにあれば失敗画像も表示できます。依存関係とコマンドは[再現手順](benchmark/README.md)を参照してください。
+平均処理時間、評価方法、データセット別の結果は[比較レポート](benchmark/results/comparison_summary.md)にあります。[合成画像の HTML レポート](https://firesh.github.io/qcore/benchmark/)ではシナリオ別の結果と失敗画像を確認できます。依存関係とコマンドは[再現手順](benchmark/README.md)を参照してください。
 
 ## ライセンス
 

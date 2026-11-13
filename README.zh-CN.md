@@ -9,7 +9,7 @@ qore 是一个快速、零第三方依赖的 Go 二维码读取库。它可以�
 | 平台 | 下载 | 版本 |
 | --- | --- | --- |
 | Go 与桌面 CLI | [qore 发布页](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
-| Android 与 iOS | [移动 SDK 预览版](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.1) | v0.1.0-preview.1 · 核心 v1.0.0 |
+| Android 与 iOS | [移动 SDK 预览版](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.2) | v0.1.0-preview.2 · 核心 v1.0.0 |
 
 Flutter 和 React Native 计划复用原生 SDK。微信小程序待验证运行方案。
 
@@ -38,7 +38,7 @@ Go API 接收 `image.Image`。用 `qore.Decode(img, nil)` 读取单个码，用 
 
 在 Apple M3 Max 上，qore 的合成集平均耗时为 **7.95 ms/图**，BoofCV 定位集为 **19.18 ms/图**。计时不含文件读取和图片解压。
 
-[四库对照报告](benchmark/results/comparison_summary.md)列出了平均耗时、评分口径和分数据集结果。[合成集 HTML 报告](benchmark/synthetic/results/report.html)提供场景明细，本地具备数据集时可查看失败图。[复测说明](benchmark/README.md)列出了依赖和命令。
+[四库对照报告](benchmark/results/comparison_summary.md)列出了平均耗时、评分口径和分数据集结果。[合成集 HTML 报告](https://firesh.github.io/qcore/benchmark/)提供场景明细和失败图。[复测说明](benchmark/README.md)列出了依赖和命令。
 
 ## 许可证
 
