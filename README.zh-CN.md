@@ -4,6 +4,15 @@
 
 qore 是一个快速、零第三方依赖的 Go 二维码读取库。它可以在一张图里定位并解码多个二维码，返回载荷和四角坐标。Go 库和 CLI 只使用标准库，无需 cgo、OpenCV 或模型文件。
 
+## 下载与 SDK
+
+| 平台 | 下载 | 版本 |
+| --- | --- | --- |
+| Go 与桌面 CLI | [qore 发布页](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
+| Android 与 iOS | [移动 SDK 预览版](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.1) | v0.1.0-preview.1 · 核心 v1.0.0 |
+
+Flutter 和 React Native 计划复用原生 SDK。微信小程序待验证运行方案。
+
 ## 快速开始
 
 在本地检出目录中使用 Go 1.23.6 或更高版本运行。

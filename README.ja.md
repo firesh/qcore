@@ -4,6 +4,15 @@
 
 qore は、高速で外部依存のない Go 製 QR コードリーダーです。画像内の複数の QR コードを検出・デコードし、ペイロードと四隅の座標を返します。ライブラリと CLI は Go の標準ライブラリだけを使用し、cgo、OpenCV、モデルファイルは不要です。
 
+## ダウンロードと SDK
+
+| プラットフォーム | ダウンロード | バージョン |
+| --- | --- | --- |
+| Go とデスクトップ CLI | [qore リリース](https://github.com/firesh/qcore/releases/tag/v1.0.0) | v1.0.0 |
+| Android と iOS | [モバイル SDK プレビュー](https://github.com/firesh/qcore-mobile/releases/tag/v0.1.0-preview.1) | v0.1.0-preview.1 · コア v1.0.0 |
+
+Flutter と React Native はネイティブ SDK を利用する予定です。WeChat ミニプログラムは実行環境の検証が必要です。
+
 ## クイックスタート
 
 ローカルのチェックアウトで Go 1.23.6 以降を使って実行します。
