@@ -30,3 +30,7 @@ In Go, call `qore.Decode(img, nil)` for one QR code or `qore.DecodeAll(img, nil)
 On the Apple M3 Max benchmark machine, qore averaged **7.95 ms/image** on the synthetic set and **19.18 ms/image** on the BoofCV location set. Timings exclude file loading and image decompression.
 
 See the [four-engine benchmark](benchmark/results/comparison_summary.md) for mean latency, scoring, and results by dataset. The [synthetic HTML report](benchmark/synthetic/results/report.html) includes per-scenario results and failure images when the dataset is available locally. [Reproduction instructions](benchmark/README.md) list the dependencies and commands.
+
+## License
+
+qore is licensed under the [MIT License](LICENSE). The bundled synthetic benchmark is licensed separately under [Apache-2.0](benchmark/synthetic/LICENSE).

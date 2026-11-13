@@ -30,3 +30,7 @@ Go API は `image.Image` を受け取ります。1 件の読み取りには `qor
 Apple M3 Max での平均処理時間は、合成画像で **7.95 ms/枚**、BoofCV の位置検出セットで **19.18 ms/枚**でした。ファイルの読み込みと画像の展開は計測対象外です。
 
 平均処理時間、評価方法、データセット別の結果は[比較レポート](benchmark/results/comparison_summary.md)にあります。[合成画像の HTML レポート](benchmark/synthetic/results/report.html)ではシナリオ別の結果を確認でき、データセットがローカルにあれば失敗画像も表示できます。依存関係とコマンドは[再現手順](benchmark/README.md)を参照してください。
+
+## ライセンス
+
+qore は [MIT ライセンス](LICENSE)で提供されます。同梱の合成ベンチマークには個別の [Apache-2.0 ライセンス](benchmark/synthetic/LICENSE)が適用されます。

@@ -30,3 +30,7 @@ Go API 接收 `image.Image`。用 `qore.Decode(img, nil)` 读取单个码，用 
 在 Apple M3 Max 上，qore 的合成集平均耗时为 **7.95 ms/图**，BoofCV 定位集为 **19.18 ms/图**。计时不含文件读取和图片解压。
 
 [四库对照报告](benchmark/results/comparison_summary.md)列出了平均耗时、评分口径和分数据集结果。[合成集 HTML 报告](benchmark/synthetic/results/report.html)提供场景明细，本地具备数据集时可查看失败图。[复测说明](benchmark/README.md)列出了依赖和命令。
+
+## 许可证
+
+qore 采用 [MIT 许可证](LICENSE)。随仓库提供的合成基准采用独立的 [Apache-2.0 许可证](benchmark/synthetic/LICENSE)。
