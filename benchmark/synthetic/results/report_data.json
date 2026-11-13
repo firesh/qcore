@@ -1,0 +1,500 @@
+{
+  "total_images": 780,
+  "readers": [
+    "zxing-cpp",
+    "wechat-qr",
+    "opencv-qr"
+  ],
+  "summary": [
+    {
+      "Engine": "zxing-cpp",
+      "Passed": 732,
+      "Images": 780,
+      "Pass rate (%)": "93.8",
+      "Total time (ms)": "25878",
+      "Mean time (ms)": "33.2"
+    },
+    {
+      "Engine": "wechat-qr",
+      "Passed": 682,
+      "Images": 780,
+      "Pass rate (%)": "87.4",
+      "Total time (ms)": "23467",
+      "Mean time (ms)": "30.1"
+    },
+    {
+      "Engine": "opencv-qr",
+      "Passed": 407,
+      "Images": 780,
+      "Pass rate (%)": "52.2",
+      "Total time (ms)": "59848",
+      "Mean time (ms)": "76.7"
+    }
+  ],
+  "scenario_table": [
+    {
+      "Scenario": "A01_doc_center",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "A02_doc_corner_small",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "11/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "A03_doc_top_right",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "A04_doc_with_table",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "11/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "A05_on_desk",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "A06_tiny_qr",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "6/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "B01_shadow_left",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B02_shadow_right",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B03_shadow_diagonal",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B04_shadow_top",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B05_spotlight",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B06_spotlight_offset",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B07_paper_texture",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B08_stained",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B09_low_contrast",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B10_very_low_contrast",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "B11_inverted",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "11/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "B12_colored_paper",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "B13_heavy_noise",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C01_persp_mild",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C02_persp_moderate",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C03_persp_strong",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "8/12",
+      "opencv-qr": "7/12"
+    },
+    {
+      "Scenario": "C04_persp_extreme",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "8/12",
+      "opencv-qr": "4/12"
+    },
+    {
+      "Scenario": "C05_topdown_20deg",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C06_topdown_40deg",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "10/12"
+    },
+    {
+      "Scenario": "C07_topdown_55deg",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C08_side_20deg",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C09_side_40deg",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C10_barrel",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C11_barrel_strong",
+      "zxing-cpp": "11/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "C12_pincushion",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "C13_wave",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "C14_wave_strong",
+      "zxing-cpp": "10/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "C15_cylindrical",
+      "zxing-cpp": "1/12",
+      "wechat-qr": "2/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "C16_cylindrical_tight",
+      "zxing-cpp": "1/12",
+      "wechat-qr": "1/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "C17_rotate_5",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "7/12"
+    },
+    {
+      "Scenario": "C18_rotate_15",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "10/12"
+    },
+    {
+      "Scenario": "C19_rotate_45",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "11/12",
+      "opencv-qr": "10/12"
+    },
+    {
+      "Scenario": "C20_rotate_90",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "C21_rotate_180",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "D01_phone_good",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "D02_phone_medium",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "D03_phone_bad",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "D04_motion_blur_light",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "8/12"
+    },
+    {
+      "Scenario": "D05_motion_blur_heavy",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "1/12"
+    },
+    {
+      "Scenario": "D06_jpeg_q15",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "D07_jpeg_q5",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "D08_blur_gaussian",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "7/12"
+    },
+    {
+      "Scenario": "D09_downscale_30pct",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "D10_downscale_15pct",
+      "zxing-cpp": "0/12",
+      "wechat-qr": "11/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "E01_desk_persp",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "6/12"
+    },
+    {
+      "Scenario": "E02_desk_topdown",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "E03_shadow_persp",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "E04_texture_barrel",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "E05_noise_persp",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "E06_phone_persp",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "E07_shadow_wave",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "E08_combined_hard",
+      "zxing-cpp": "11/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "E09_combined_extreme",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "E10_cylinder_shadow",
+      "zxing-cpp": "2/12",
+      "wechat-qr": "2/12",
+      "opencv-qr": "0/12"
+    },
+    {
+      "Scenario": "F01_multi_two",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "12/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "F02_multi_three",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "5/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "F03_multi_sizes",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "0/12",
+      "opencv-qr": "9/12"
+    },
+    {
+      "Scenario": "F04_multi_desk_persp",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "9/12",
+      "opencv-qr": "1/12"
+    },
+    {
+      "Scenario": "F05_multi_persp_strong",
+      "zxing-cpp": "12/12",
+      "wechat-qr": "7/12",
+      "opencv-qr": "0/12"
+    }
+  ],
+  "data_table": [
+    {
+      "Payload": "dense_1200",
+      "zxing-cpp": "59/65",
+      "wechat-qr": "48/65",
+      "opencv-qr": "0/65"
+    },
+    {
+      "Payload": "dense_300",
+      "zxing-cpp": "60/65",
+      "wechat-qr": "59/65",
+      "opencv-qr": "41/65"
+    },
+    {
+      "Payload": "dense_600",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "53/65",
+      "opencv-qr": "11/65"
+    },
+    {
+      "Payload": "dense_jp_500",
+      "zxing-cpp": "60/65",
+      "wechat-qr": "51/65",
+      "opencv-qr": "3/65"
+    },
+    {
+      "Payload": "japanese",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "60/65",
+      "opencv-qr": "47/65"
+    },
+    {
+      "Payload": "long_url",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "59/65",
+      "opencv-qr": "44/65"
+    },
+    {
+      "Payload": "numeric",
+      "zxing-cpp": "62/65",
+      "wechat-qr": "58/65",
+      "opencv-qr": "44/65"
+    },
+    {
+      "Payload": "short",
+      "zxing-cpp": "64/65",
+      "wechat-qr": "57/65",
+      "opencv-qr": "39/65"
+    },
+    {
+      "Payload": "url",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "60/65",
+      "opencv-qr": "45/65"
+    },
+    {
+      "Payload": "uuid",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "59/65",
+      "opencv-qr": "47/65"
+    },
+    {
+      "Payload": "vcard",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "60/65",
+      "opencv-qr": "40/65"
+    },
+    {
+      "Payload": "wifi",
+      "zxing-cpp": "61/65",
+      "wechat-qr": "58/65",
+      "opencv-qr": "46/65"
+    }
+  ]
+}

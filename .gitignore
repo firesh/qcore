@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+benchmark/synthetic/test_images/
+benchmark/synthetic/models/
+benchmark/boofcv/boofcv-v3/
+
+# Local Go build outputs
+/bin/
+/*.test
+
+.DS_Store

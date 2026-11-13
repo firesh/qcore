@@ -1,0 +1,32 @@
+# qore
+
+English · [简体中文](README.zh-CN.md) · [日本語](README.ja.md)
+
+qore is a fast, dependency-free QR code reader for Go. It detects and decodes multiple QR codes from an image and returns their payloads and corner coordinates. The Go library and CLI use the standard library, with no cgo, OpenCV, or model files.
+
+## Quick start
+
+From a local checkout, with Go 1.23.6 or later:
+
+```sh
+go run ./cmd/qore --json image.png
+go run ./cmd/qore --multi=false image.jpg
+go test ./...
+```
+
+The CLI accepts PNG, JPEG, and GIF images, and can scan directories recursively. Use `--batch-stdin --json` to pass one path per line and receive one JSON result per line.
+
+In Go, call `qore.Decode(img, nil)` for one QR code or `qore.DecodeAll(img, nil)` for multiple codes. Both accept an `image.Image`. Use `qore.DecodeFile(path, nil)` to decode a file and apply JPEG EXIF orientation, or `qore.DecodeRawFile(path, nil)` to keep the original pixel coordinates.
+
+## Benchmarks
+
+![Four-engine comparison of QR recognition, location recall, and latency](benchmark/results/engine_comparison.svg)
+
+| Dataset | qore | ZXing-C++ |
+| --- | ---: | ---: |
+| Synthetic images, all expected payloads recovered | 754/780 (96.67%) | 732/780 (93.85%) |
+| BoofCV QR v3, location recall | 1123/1232 (91.15%) | 984/1232 (79.87%) |
+
+On the Apple M3 Max benchmark machine, qore averaged **7.95 ms/image** on the synthetic set and **19.18 ms/image** on the BoofCV location set. Timings exclude file loading and image decompression.
+
+See the [four-engine benchmark](benchmark/results/comparison_summary.md) for mean latency, scoring, and results by dataset. The [synthetic HTML report](benchmark/synthetic/results/report.html) includes per-scenario results and failure images when the dataset is available locally. [Reproduction instructions](benchmark/README.md) list the dependencies and commands.

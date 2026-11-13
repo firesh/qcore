@@ -1,0 +1,7 @@
+qrcode[pil]
+Pillow
+numpy
+opencv-contrib-python
+zxing-cpp
+deqr
+tabulate

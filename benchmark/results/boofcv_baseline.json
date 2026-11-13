@@ -1,0 +1,1124 @@
+{
+  "dataset": "boofcv-v3",
+  "decoding": {
+    "zxing-cpp": {
+      "total_images": 26,
+      "correct_norm": 26,
+      "accuracy_norm_pct": 100.0,
+      "correct_exact": 17,
+      "accuracy_exact_pct": 65.38,
+      "total_ms": 70.15,
+      "avg_ms": 2.7,
+      "per_image": [
+        {
+          "filename": "v2Email.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.103
+        },
+        {
+          "filename": "v2Event.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 2.59
+        },
+        {
+          "filename": "v2FaceBook.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.003
+        },
+        {
+          "filename": "v2Location.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.024
+        },
+        {
+          "filename": "v2MeCard-Address.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.721
+        },
+        {
+          "filename": "v2MeCard-Dates.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.183
+        },
+        {
+          "filename": "v2MeCard-Notes.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.431
+        },
+        {
+          "filename": "v2MeCard-POBOX.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 2.23
+        },
+        {
+          "filename": "v2MeCard-Phone.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.437
+        },
+        {
+          "filename": "v2Phone.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 0.798
+        },
+        {
+          "filename": "v2SMS-Text.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 0.829
+        },
+        {
+          "filename": "v2Twitter.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.185
+        },
+        {
+          "filename": "v2VCard-BasicWikipedia.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 8.319
+        },
+        {
+          "filename": "v2VCard-Encoding.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 6.686
+        },
+        {
+          "filename": "v2VCard-Title.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 2.329
+        },
+        {
+          "filename": "v2VCard-Type.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 4.971
+        },
+        {
+          "filename": "v2WIFI.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.046
+        },
+        {
+          "filename": "v2Website.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.63
+        },
+        {
+          "filename": "v2YouTube.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.166
+        },
+        {
+          "filename": "v3SMS-Text.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.172
+        },
+        {
+          "filename": "v3Twitter.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.697
+        },
+        {
+          "filename": "v3VCard-BasicWikipedia.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 8.614
+        },
+        {
+          "filename": "v3VCard-Encoding.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 6.662
+        },
+        {
+          "filename": "v3VCard-Title.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 2.351
+        },
+        {
+          "filename": "v3VCard-Type.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 5.759
+        },
+        {
+          "filename": "v3YouTube.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 1.212
+        }
+      ]
+    },
+    "wechat-qr": {
+      "total_images": 26,
+      "correct_norm": 26,
+      "accuracy_norm_pct": 100.0,
+      "correct_exact": 17,
+      "accuracy_exact_pct": 65.38,
+      "total_ms": 195.33,
+      "avg_ms": 7.51,
+      "per_image": [
+        {
+          "filename": "v2Email.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.891
+        },
+        {
+          "filename": "v2Event.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 10.475
+        },
+        {
+          "filename": "v2FaceBook.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 5.674
+        },
+        {
+          "filename": "v2Location.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 5.116
+        },
+        {
+          "filename": "v2MeCard-Address.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 8.916
+        },
+        {
+          "filename": "v2MeCard-Dates.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 5.948
+        },
+        {
+          "filename": "v2MeCard-Notes.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.121
+        },
+        {
+          "filename": "v2MeCard-POBOX.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 9.888
+        },
+        {
+          "filename": "v2MeCard-Phone.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.472
+        },
+        {
+          "filename": "v2Phone.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 4.662
+        },
+        {
+          "filename": "v2SMS-Text.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 4.072
+        },
+        {
+          "filename": "v2Twitter.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.317
+        },
+        {
+          "filename": "v2VCard-BasicWikipedia.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 9.991
+        },
+        {
+          "filename": "v2VCard-Encoding.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 7.913
+        },
+        {
+          "filename": "v2VCard-Title.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 8.251
+        },
+        {
+          "filename": "v2VCard-Type.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 9.951
+        },
+        {
+          "filename": "v2WIFI.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 5.354
+        },
+        {
+          "filename": "v2Website.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 8.988
+        },
+        {
+          "filename": "v2YouTube.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.109
+        },
+        {
+          "filename": "v3SMS-Text.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 5.536
+        },
+        {
+          "filename": "v3Twitter.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 8.437
+        },
+        {
+          "filename": "v3VCard-BasicWikipedia.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 9.639
+        },
+        {
+          "filename": "v3VCard-Encoding.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 7.848
+        },
+        {
+          "filename": "v3VCard-Title.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 8.4
+        },
+        {
+          "filename": "v3VCard-Type.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 10.187
+        },
+        {
+          "filename": "v3YouTube.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.172
+        }
+      ]
+    },
+    "opencv-qr": {
+      "total_images": 26,
+      "correct_norm": 23,
+      "accuracy_norm_pct": 88.46,
+      "correct_exact": 16,
+      "accuracy_exact_pct": 61.54,
+      "total_ms": 317.35,
+      "avg_ms": 12.21,
+      "per_image": [
+        {
+          "filename": "v2Email.png",
+          "matched_norm": false,
+          "matched_exact": false,
+          "decoded_count": 0,
+          "time_ms": 6.112
+        },
+        {
+          "filename": "v2Event.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 14.405
+        },
+        {
+          "filename": "v2FaceBook.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.399
+        },
+        {
+          "filename": "v2Location.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.967
+        },
+        {
+          "filename": "v2MeCard-Address.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 10.069
+        },
+        {
+          "filename": "v2MeCard-Dates.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.848
+        },
+        {
+          "filename": "v2MeCard-Notes.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 8.382
+        },
+        {
+          "filename": "v2MeCard-POBOX.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 13.63
+        },
+        {
+          "filename": "v2MeCard-Phone.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 9.868
+        },
+        {
+          "filename": "v2Phone.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.878
+        },
+        {
+          "filename": "v2SMS-Text.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 6.942
+        },
+        {
+          "filename": "v2Twitter.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 8.511
+        },
+        {
+          "filename": "v2VCard-BasicWikipedia.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 29.669
+        },
+        {
+          "filename": "v2VCard-Encoding.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 25.389
+        },
+        {
+          "filename": "v2VCard-Title.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 14.18
+        },
+        {
+          "filename": "v2VCard-Type.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 18.901
+        },
+        {
+          "filename": "v2WIFI.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.578
+        },
+        {
+          "filename": "v2Website.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 10.409
+        },
+        {
+          "filename": "v2YouTube.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.956
+        },
+        {
+          "filename": "v3SMS-Text.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 7.946
+        },
+        {
+          "filename": "v3Twitter.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 10.204
+        },
+        {
+          "filename": "v3VCard-BasicWikipedia.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 32.316
+        },
+        {
+          "filename": "v3VCard-Encoding.png",
+          "matched_norm": false,
+          "matched_exact": false,
+          "decoded_count": 0,
+          "time_ms": 12.686
+        },
+        {
+          "filename": "v3VCard-Title.png",
+          "matched_norm": true,
+          "matched_exact": false,
+          "decoded_count": 1,
+          "time_ms": 13.408
+        },
+        {
+          "filename": "v3VCard-Type.png",
+          "matched_norm": false,
+          "matched_exact": false,
+          "decoded_count": 0,
+          "time_ms": 11.198
+        },
+        {
+          "filename": "v3YouTube.png",
+          "matched_norm": true,
+          "matched_exact": true,
+          "decoded_count": 1,
+          "time_ms": 8.501
+        }
+      ]
+    }
+  },
+  "detection": {
+    "categories": [
+      "blurred",
+      "bright_spots",
+      "brightness",
+      "close",
+      "curved",
+      "damaged",
+      "glare",
+      "high_version",
+      "lots",
+      "monitor",
+      "nominal",
+      "noncompliant",
+      "pathological",
+      "perspective",
+      "rotations",
+      "shadows"
+    ],
+    "total_images": 536,
+    "total_gt_quads": 1232,
+    "readers": {
+      "zxing-cpp": {
+        "total_images": 536,
+        "total_gt_quads": 1232,
+        "decoded_qr": 987,
+        "decode_rate_pct": 80.11,
+        "detected_quads": 984,
+        "detection_rate_pct": 79.87,
+        "total_ms": 23482.36,
+        "avg_ms": 43.81,
+        "categories": {
+          "blurred": {
+            "images": 45,
+            "gt_quads": 65,
+            "decoded_qr": 37,
+            "decode_rate_pct": 56.92,
+            "detected_quads": 36,
+            "detection_rate_pct": 55.38,
+            "total_ms": 1900.9,
+            "avg_ms": 42.24
+          },
+          "bright_spots": {
+            "images": 32,
+            "gt_quads": 97,
+            "decoded_qr": 27,
+            "decode_rate_pct": 27.84,
+            "detected_quads": 27,
+            "detection_rate_pct": 27.84,
+            "total_ms": 2434.64,
+            "avg_ms": 76.08
+          },
+          "brightness": {
+            "images": 28,
+            "gt_quads": 85,
+            "decoded_qr": 69,
+            "decode_rate_pct": 81.18,
+            "detected_quads": 69,
+            "detection_rate_pct": 81.18,
+            "total_ms": 2225.36,
+            "avg_ms": 79.48
+          },
+          "close": {
+            "images": 40,
+            "gt_quads": 40,
+            "decoded_qr": 40,
+            "decode_rate_pct": 100.0,
+            "detected_quads": 40,
+            "detection_rate_pct": 100.0,
+            "total_ms": 3522.43,
+            "avg_ms": 88.06
+          },
+          "curved": {
+            "images": 50,
+            "gt_quads": 60,
+            "decoded_qr": 33,
+            "decode_rate_pct": 55.0,
+            "detected_quads": 33,
+            "detection_rate_pct": 55.0,
+            "total_ms": 2375.63,
+            "avg_ms": 47.51
+          },
+          "damaged": {
+            "images": 37,
+            "gt_quads": 43,
+            "decoded_qr": 12,
+            "decode_rate_pct": 27.91,
+            "detected_quads": 12,
+            "detection_rate_pct": 27.91,
+            "total_ms": 842.49,
+            "avg_ms": 22.77
+          },
+          "glare": {
+            "images": 50,
+            "gt_quads": 53,
+            "decoded_qr": 24,
+            "decode_rate_pct": 45.28,
+            "detected_quads": 22,
+            "detection_rate_pct": 41.51,
+            "total_ms": 1759.53,
+            "avg_ms": 35.19
+          },
+          "high_version": {
+            "images": 33,
+            "gt_quads": 37,
+            "decoded_qr": 33,
+            "decode_rate_pct": 89.19,
+            "detected_quads": 33,
+            "detection_rate_pct": 89.19,
+            "total_ms": 1013.67,
+            "avg_ms": 30.72
+          },
+          "lots": {
+            "images": 7,
+            "gt_quads": 420,
+            "decoded_qr": 419,
+            "decode_rate_pct": 99.76,
+            "detected_quads": 419,
+            "detection_rate_pct": 99.76,
+            "total_ms": 1246.33,
+            "avg_ms": 178.05
+          },
+          "monitor": {
+            "images": 17,
+            "gt_quads": 17,
+            "decoded_qr": 17,
+            "decode_rate_pct": 100.0,
+            "detected_quads": 17,
+            "detection_rate_pct": 100.0,
+            "total_ms": 2249.44,
+            "avg_ms": 132.32
+          },
+          "nominal": {
+            "images": 65,
+            "gt_quads": 78,
+            "decoded_qr": 74,
+            "decode_rate_pct": 94.87,
+            "detected_quads": 74,
+            "detection_rate_pct": 94.87,
+            "total_ms": 1535.75,
+            "avg_ms": 23.63
+          },
+          "noncompliant": {
+            "images": 16,
+            "gt_quads": 26,
+            "decoded_qr": 20,
+            "decode_rate_pct": 76.92,
+            "detected_quads": 20,
+            "detection_rate_pct": 76.92,
+            "total_ms": 207.42,
+            "avg_ms": 12.96
+          },
+          "pathological": {
+            "images": 23,
+            "gt_quads": 23,
+            "decoded_qr": 10,
+            "decode_rate_pct": 43.48,
+            "detected_quads": 10,
+            "detection_rate_pct": 43.48,
+            "total_ms": 22.75,
+            "avg_ms": 0.99
+          },
+          "perspective": {
+            "images": 35,
+            "gt_quads": 35,
+            "decoded_qr": 22,
+            "decode_rate_pct": 62.86,
+            "detected_quads": 22,
+            "detection_rate_pct": 62.86,
+            "total_ms": 232.04,
+            "avg_ms": 6.63
+          },
+          "rotations": {
+            "images": 44,
+            "gt_quads": 133,
+            "decoded_qr": 131,
+            "decode_rate_pct": 98.5,
+            "detected_quads": 131,
+            "detection_rate_pct": 98.5,
+            "total_ms": 1394.75,
+            "avg_ms": 31.7
+          },
+          "shadows": {
+            "images": 14,
+            "gt_quads": 20,
+            "decoded_qr": 19,
+            "decode_rate_pct": 95.0,
+            "detected_quads": 19,
+            "detection_rate_pct": 95.0,
+            "total_ms": 519.24,
+            "avg_ms": 37.09
+          }
+        }
+      },
+      "wechat-qr": {
+        "total_images": 536,
+        "total_gt_quads": 1232,
+        "decoded_qr": 513,
+        "decode_rate_pct": 41.64,
+        "detected_quads": 513,
+        "detection_rate_pct": 41.64,
+        "total_ms": 44768.24,
+        "avg_ms": 83.52,
+        "categories": {
+          "blurred": {
+            "images": 45,
+            "gt_quads": 65,
+            "decoded_qr": 37,
+            "decode_rate_pct": 56.92,
+            "detected_quads": 37,
+            "detection_rate_pct": 56.92,
+            "total_ms": 1752.03,
+            "avg_ms": 38.93
+          },
+          "bright_spots": {
+            "images": 32,
+            "gt_quads": 97,
+            "decoded_qr": 32,
+            "decode_rate_pct": 32.99,
+            "detected_quads": 32,
+            "detection_rate_pct": 32.99,
+            "total_ms": 570.07,
+            "avg_ms": 17.81
+          },
+          "brightness": {
+            "images": 28,
+            "gt_quads": 85,
+            "decoded_qr": 57,
+            "decode_rate_pct": 67.06,
+            "detected_quads": 57,
+            "detection_rate_pct": 67.06,
+            "total_ms": 740.68,
+            "avg_ms": 26.45
+          },
+          "close": {
+            "images": 40,
+            "gt_quads": 40,
+            "decoded_qr": 26,
+            "decode_rate_pct": 65.0,
+            "detected_quads": 26,
+            "detection_rate_pct": 65.0,
+            "total_ms": 13812.69,
+            "avg_ms": 345.32
+          },
+          "curved": {
+            "images": 50,
+            "gt_quads": 60,
+            "decoded_qr": 26,
+            "decode_rate_pct": 43.33,
+            "detected_quads": 26,
+            "detection_rate_pct": 43.33,
+            "total_ms": 2756.68,
+            "avg_ms": 55.13
+          },
+          "damaged": {
+            "images": 37,
+            "gt_quads": 43,
+            "decoded_qr": 22,
+            "decode_rate_pct": 51.16,
+            "detected_quads": 22,
+            "detection_rate_pct": 51.16,
+            "total_ms": 2655.71,
+            "avg_ms": 71.78
+          },
+          "glare": {
+            "images": 50,
+            "gt_quads": 53,
+            "decoded_qr": 35,
+            "decode_rate_pct": 66.04,
+            "detected_quads": 35,
+            "detection_rate_pct": 66.04,
+            "total_ms": 1836.19,
+            "avg_ms": 36.72
+          },
+          "high_version": {
+            "images": 33,
+            "gt_quads": 37,
+            "decoded_qr": 7,
+            "decode_rate_pct": 18.92,
+            "detected_quads": 7,
+            "detection_rate_pct": 18.92,
+            "total_ms": 10824.11,
+            "avg_ms": 328.0
+          },
+          "lots": {
+            "images": 7,
+            "gt_quads": 420,
+            "decoded_qr": 0,
+            "decode_rate_pct": 0.0,
+            "detected_quads": 0,
+            "detection_rate_pct": 0.0,
+            "total_ms": 73.51,
+            "avg_ms": 10.5
+          },
+          "monitor": {
+            "images": 17,
+            "gt_quads": 17,
+            "decoded_qr": 16,
+            "decode_rate_pct": 94.12,
+            "detected_quads": 16,
+            "detection_rate_pct": 94.12,
+            "total_ms": 5541.03,
+            "avg_ms": 325.94
+          },
+          "nominal": {
+            "images": 65,
+            "gt_quads": 78,
+            "decoded_qr": 65,
+            "decode_rate_pct": 83.33,
+            "detected_quads": 65,
+            "detection_rate_pct": 83.33,
+            "total_ms": 1068.6,
+            "avg_ms": 16.44
+          },
+          "noncompliant": {
+            "images": 16,
+            "gt_quads": 26,
+            "decoded_qr": 24,
+            "decode_rate_pct": 92.31,
+            "detected_quads": 24,
+            "detection_rate_pct": 92.31,
+            "total_ms": 319.62,
+            "avg_ms": 19.98
+          },
+          "pathological": {
+            "images": 23,
+            "gt_quads": 23,
+            "decoded_qr": 21,
+            "decode_rate_pct": 91.3,
+            "detected_quads": 21,
+            "detection_rate_pct": 91.3,
+            "total_ms": 233.64,
+            "avg_ms": 10.16
+          },
+          "perspective": {
+            "images": 35,
+            "gt_quads": 35,
+            "decoded_qr": 16,
+            "decode_rate_pct": 45.71,
+            "detected_quads": 16,
+            "detection_rate_pct": 45.71,
+            "total_ms": 559.28,
+            "avg_ms": 15.98
+          },
+          "rotations": {
+            "images": 44,
+            "gt_quads": 133,
+            "decoded_qr": 110,
+            "decode_rate_pct": 82.71,
+            "detected_quads": 110,
+            "detection_rate_pct": 82.71,
+            "total_ms": 1620.05,
+            "avg_ms": 36.82
+          },
+          "shadows": {
+            "images": 14,
+            "gt_quads": 20,
+            "decoded_qr": 19,
+            "decode_rate_pct": 95.0,
+            "detected_quads": 19,
+            "detection_rate_pct": 95.0,
+            "total_ms": 404.36,
+            "avg_ms": 28.88
+          }
+        }
+      },
+      "opencv-qr": {
+        "total_images": 536,
+        "total_gt_quads": 1232,
+        "decoded_qr": 624,
+        "decode_rate_pct": 50.65,
+        "detected_quads": 739,
+        "detection_rate_pct": 59.98,
+        "total_ms": 92723.37,
+        "avg_ms": 172.99,
+        "categories": {
+          "blurred": {
+            "images": 45,
+            "gt_quads": 65,
+            "decoded_qr": 15,
+            "decode_rate_pct": 23.08,
+            "detected_quads": 21,
+            "detection_rate_pct": 32.31,
+            "total_ms": 5631.76,
+            "avg_ms": 125.15
+          },
+          "bright_spots": {
+            "images": 32,
+            "gt_quads": 97,
+            "decoded_qr": 23,
+            "decode_rate_pct": 23.71,
+            "detected_quads": 34,
+            "detection_rate_pct": 35.05,
+            "total_ms": 8933.48,
+            "avg_ms": 279.17
+          },
+          "brightness": {
+            "images": 28,
+            "gt_quads": 85,
+            "decoded_qr": 19,
+            "decode_rate_pct": 22.35,
+            "detected_quads": 22,
+            "detection_rate_pct": 25.88,
+            "total_ms": 6793.31,
+            "avg_ms": 242.62
+          },
+          "close": {
+            "images": 40,
+            "gt_quads": 40,
+            "decoded_qr": 28,
+            "decode_rate_pct": 70.0,
+            "detected_quads": 28,
+            "detection_rate_pct": 70.0,
+            "total_ms": 12075.59,
+            "avg_ms": 301.89
+          },
+          "curved": {
+            "images": 50,
+            "gt_quads": 60,
+            "decoded_qr": 14,
+            "decode_rate_pct": 23.33,
+            "detected_quads": 42,
+            "detection_rate_pct": 70.0,
+            "total_ms": 7600.05,
+            "avg_ms": 152.0
+          },
+          "damaged": {
+            "images": 37,
+            "gt_quads": 43,
+            "decoded_qr": 3,
+            "decode_rate_pct": 6.98,
+            "detected_quads": 8,
+            "detection_rate_pct": 18.6,
+            "total_ms": 1940.32,
+            "avg_ms": 52.44
+          },
+          "glare": {
+            "images": 50,
+            "gt_quads": 53,
+            "decoded_qr": 7,
+            "decode_rate_pct": 13.21,
+            "detected_quads": 18,
+            "detection_rate_pct": 33.96,
+            "total_ms": 4441.49,
+            "avg_ms": 88.83
+          },
+          "high_version": {
+            "images": 33,
+            "gt_quads": 37,
+            "decoded_qr": 2,
+            "decode_rate_pct": 5.41,
+            "detected_quads": 13,
+            "detection_rate_pct": 35.14,
+            "total_ms": 5986.99,
+            "avg_ms": 181.42
+          },
+          "lots": {
+            "images": 7,
+            "gt_quads": 420,
+            "decoded_qr": 342,
+            "decode_rate_pct": 81.43,
+            "detected_quads": 352,
+            "detection_rate_pct": 83.81,
+            "total_ms": 20100.73,
+            "avg_ms": 2871.53
+          },
+          "monitor": {
+            "images": 17,
+            "gt_quads": 17,
+            "decoded_qr": 17,
+            "decode_rate_pct": 100.0,
+            "detected_quads": 17,
+            "detection_rate_pct": 100.0,
+            "total_ms": 5576.23,
+            "avg_ms": 328.01
+          },
+          "nominal": {
+            "images": 65,
+            "gt_quads": 78,
+            "decoded_qr": 38,
+            "decode_rate_pct": 48.72,
+            "detected_quads": 44,
+            "detection_rate_pct": 56.41,
+            "total_ms": 5325.68,
+            "avg_ms": 81.93
+          },
+          "noncompliant": {
+            "images": 16,
+            "gt_quads": 26,
+            "decoded_qr": 1,
+            "decode_rate_pct": 3.85,
+            "detected_quads": 17,
+            "detection_rate_pct": 65.38,
+            "total_ms": 728.98,
+            "avg_ms": 45.56
+          },
+          "pathological": {
+            "images": 23,
+            "gt_quads": 23,
+            "decoded_qr": 1,
+            "decode_rate_pct": 4.35,
+            "detected_quads": 2,
+            "detection_rate_pct": 8.7,
+            "total_ms": 142.23,
+            "avg_ms": 6.18
+          },
+          "perspective": {
+            "images": 35,
+            "gt_quads": 35,
+            "decoded_qr": 13,
+            "decode_rate_pct": 37.14,
+            "detected_quads": 16,
+            "detection_rate_pct": 45.71,
+            "total_ms": 788.19,
+            "avg_ms": 22.52
+          },
+          "rotations": {
+            "images": 44,
+            "gt_quads": 133,
+            "decoded_qr": 88,
+            "decode_rate_pct": 66.17,
+            "detected_quads": 89,
+            "detection_rate_pct": 66.92,
+            "total_ms": 4801.07,
+            "avg_ms": 109.12
+          },
+          "shadows": {
+            "images": 14,
+            "gt_quads": 20,
+            "decoded_qr": 13,
+            "decode_rate_pct": 65.0,
+            "detected_quads": 16,
+            "detection_rate_pct": 80.0,
+            "total_ms": 1857.24,
+            "avg_ms": 132.66
+          }
+        }
+      }
+    }
+  }
+}
