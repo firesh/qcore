@@ -56,7 +56,50 @@ func DetectAndDecodeImage(img image.Image, opts Options) []Result {
 	if img == nil {
 		return nil
 	}
-	return trimResults(DetectAndDecode(imageproc.ExtractChannel(img, imageproc.ChannelLuma), opts), opts)
+	results := DetectAndDecode(imageproc.ExtractChannel(img, imageproc.ChannelLuma), opts)
+	if hasDecoded(results) {
+		return trimResults(results, opts)
+	}
+
+	// Rescue colored codes with uneven backgrounds after the luminance cascade fails.
+	b := img.Bounds()
+	gray := imageproc.NewGrayImage(b.Dx(), b.Dy())
+	values := make([]int16, len(gray.Pix))
+	lo, hi := 510, -255
+	for y := 0; y < gray.Height; y++ {
+		for x := 0; x < gray.Width; x++ {
+			r, _, blue, _ := img.At(b.Min.X+x, b.Min.Y+y).RGBA()
+			v := 2*int(r>>8) - int(blue>>8)
+			values[y*gray.Width+x] = int16(v)
+			lo, hi = min(lo, v), max(hi, v)
+		}
+	}
+	if hi-lo <= 15 {
+		return trimResults(results, opts)
+	}
+	for i, v := range values {
+		gray.Pix[i] = uint8((int(v) - lo) * 255 / (hi - lo))
+	}
+	bm := imageproc.AdaptiveMeanBinarizer(gray, imageproc.NewIntegralImage(gray), 17, 0.15)
+	for y := 0; y < gray.Height; y++ {
+		for x := 0; x < gray.Width; x++ {
+			if bm.Get(x, y) {
+				gray.Pix[y*gray.Width+x] = 0
+			} else {
+				gray.Pix[y*gray.Width+x] = 255
+			}
+		}
+	}
+	rescueOpts := opts
+	rescueOpts.Multi = true // Include the existing upscale recovery for the binary image.
+	if !opts.Multi {
+		rescueOpts.MaxResults = 1
+	}
+	rescued := DetectAndDecode(gray, rescueOpts)
+	if hasDecoded(rescued) {
+		return trimResults(rescued, opts)
+	}
+	return trimResults(results, opts)
 }
 
 func runCascade(gray *imageproc.GrayImage, opts Options, padOffset float64) []Result {
