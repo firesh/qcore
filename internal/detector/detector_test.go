@@ -640,3 +640,33 @@ func TestDetectAndDecode_PureBarcodeAndUnreadable(t *testing.T) {
 		t.Fatalf("expected unreadable detection with Decoded=false, got: %+v", un)
 	}
 }
+
+func TestMergedFinderExterior(t *testing.T) {
+	const payload = "merged finder"
+	mat := encodeTestQR(payload, 2, decoder.ECM, 1)
+	for _, ms := range []int{6, 15, 30} {
+		for _, colors := range [][3]uint8{{170, 26, 255}, {255, 0, 255}, {0, 255, 0}, {235, 20, 20}} {
+			size := (len(mat) + 8) * ms
+			gray := imageproc.NewGrayImage(size, size)
+			for y := 0; y < size; y++ {
+				for x := 0; x < size; x++ {
+					r, c := y/ms-4, x/ms-4
+					v := colors[2]
+					if r >= 0 && c >= 0 && r < len(mat) && c < len(mat) {
+						v = colors[1]
+						if mat[r][c] {
+							v = colors[0]
+						}
+					}
+					gray.Pix[y*size+x] = v
+				}
+			}
+			for _, multi := range []bool{false, true} {
+				got := DetectAndDecode(gray, Options{Multi: multi})
+				if len(got) != 1 || got[0].Text != payload {
+					t.Fatalf("module=%d colors=%v multi=%t got=%v", ms, colors, multi, got)
+				}
+			}
+		}
+	}
+}

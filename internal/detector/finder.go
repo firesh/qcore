@@ -28,6 +28,10 @@ func FindFinderPatterns(bm *imageproc.BitMatrix, tryHarder bool) []ConcentricPat
 }
 
 func findFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny bool) []ConcentricPattern {
+	return scanFinderPatterns(bm, tryHarder, allowTiny, false)
+}
+
+func scanFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny, openOuter bool) []ConcentricPattern {
 	if bm == nil || bm.Width < 7 || bm.Height < 7 {
 		return nil
 	}
@@ -58,7 +62,7 @@ func findFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny bool) []Co
 				defer wg.Done()
 				var local []ConcentricPattern
 				for i := sIdx; i < eIdx; i++ {
-					scanLineForPatterns(bm, i*skip, true, allowTiny, &local)
+					scanLineForPatterns(bm, i*skip, true, allowTiny, openOuter, &local)
 				}
 				stripes[workerID] = local
 			}(w, startIdx, endIdx)
@@ -71,7 +75,7 @@ func findFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny bool) []Co
 		}
 	} else {
 		for y := 0; y < bm.Height; y += skip {
-			scanLineForPatterns(bm, y, true, allowTiny, &patterns)
+			scanLineForPatterns(bm, y, true, allowTiny, openOuter, &patterns)
 		}
 	}
 
@@ -95,7 +99,7 @@ func findFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny bool) []Co
 					defer wg.Done()
 					var local []ConcentricPattern
 					for i := sIdx; i < eIdx; i++ {
-						scanLineForPatterns(bm, i*colSkip, false, allowTiny, &local)
+						scanLineForPatterns(bm, i*colSkip, false, allowTiny, openOuter, &local)
 					}
 					stripes[workerID] = local
 				}(w, startIdx, endIdx)
@@ -108,7 +112,7 @@ func findFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny bool) []Co
 			}
 		} else {
 			for x := 0; x < bm.Width; x += colSkip {
-				scanLineForPatterns(bm, x, false, allowTiny, &patterns)
+				scanLineForPatterns(bm, x, false, allowTiny, openOuter, &patterns)
 			}
 		}
 	}
@@ -132,7 +136,7 @@ func findFinderPatterns(bm *imageproc.BitMatrix, tryHarder, allowTiny bool) []Co
 	return patterns
 }
 
-func scanLineForPatterns(bm *imageproc.BitMatrix, fixedCoord int, horizontal bool, tryHarder bool, out *[]ConcentricPattern) {
+func scanLineForPatterns(bm *imageproc.BitMatrix, fixedCoord int, horizontal bool, tryHarder, openOuter bool, out *[]ConcentricPattern) {
 	length := bm.Width
 	if !horizontal {
 		length = bm.Height
@@ -152,15 +156,21 @@ func scanLineForPatterns(bm *imageproc.BitMatrix, fixedCoord int, horizontal boo
 		if counts[2] < minCenter {
 			return
 		}
-		if score, ok := matchFinderRatio(counts, tryHarder); ok {
+		physicalOuter := counts[4]
+		measured := counts
+		if openOuter {
+			measured = limitOuterRuns(counts)
+		}
+		if score, ok := matchFinderRatio(measured, tryHarder); ok {
+			counts := measured
 			total := counts[0] + counts[1] + counts[2] + counts[3] + counts[4]
-			centerPos := float64(endPos) - float64(counts[4]+counts[3]) - float64(counts[2])*0.5
+			centerPos := float64(endPos) - float64(physicalOuter+counts[3]) - float64(counts[2])*0.5
 			estMS := float64(total) / 7.0
 			cx, cy := centerPos, float64(fixedCoord)+0.5
 			if !horizontal {
 				cx, cy = float64(fixedCoord)+0.5, centerPos
 			}
-			if pat, ok := locateConcentricCore(bm, cx, cy, estMS, tryHarder); ok {
+			if pat, ok := locateConcentricCore(bm, cx, cy, estMS, tryHarder, openOuter); ok {
 				if score > pat.Score {
 					pat.Score = (pat.Score + score) * 0.5
 				}
@@ -300,7 +310,7 @@ func matchFinderRatio(counts [5]int, tryHarder bool) (float64, bool) {
 // ratios around (cx, cy), refines the sub-pixel center via concentric ring centering,
 // and extracts the outer 7x7 square corners when possible.
 func LocateConcentricPattern(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize float64, tryHarder bool) (ConcentricPattern, bool) {
-	pat, ok := locateConcentricCore(bm, cx, cy, estimatedModuleSize, tryHarder)
+	pat, ok := locateConcentricCore(bm, cx, cy, estimatedModuleSize, tryHarder, false)
 	if !ok {
 		return ConcentricPattern{}, false
 	}
@@ -308,7 +318,7 @@ func LocateConcentricPattern(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSiz
 	return pat, true
 }
 
-func locateConcentricCore(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize float64, tryHarder bool) (ConcentricPattern, bool) {
+func locateConcentricCore(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize float64, tryHarder, openOuter bool) (ConcentricPattern, bool) {
 	ix := clampInt(int(math.Floor(cx)), 0, bm.Width-1)
 	iy := clampInt(int(math.Floor(cy)), 0, bm.Height-1)
 	if !bm.Get(ix, iy) {
@@ -321,14 +331,14 @@ func locateConcentricCore(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize f
 	}
 
 	// Vertical cross-check.
-	vCenter, vTotal, vScore, ok := crossCheckAxis(bm, ix, iy, 0, 1, maxScan, estimatedModuleSize, tryHarder)
+	vCenter, vTotal, vScore, ok := crossCheckAxis(bm, ix, iy, 0, 1, maxScan, estimatedModuleSize, tryHarder, openOuter)
 	if !ok {
 		return ConcentricPattern{}, false
 	}
 	iyRef := clampInt(int(math.Floor(vCenter)), 0, bm.Height-1)
 
 	// Horizontal cross-check at refined Y.
-	hCenter, hTotal, hScore, ok := crossCheckAxis(bm, ix, iyRef, 1, 0, maxScan, estimatedModuleSize, tryHarder)
+	hCenter, hTotal, hScore, ok := crossCheckAxis(bm, ix, iyRef, 1, 0, maxScan, estimatedModuleSize, tryHarder, openOuter)
 	if !ok {
 		return ConcentricPattern{}, false
 	}
@@ -336,7 +346,7 @@ func locateConcentricCore(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize f
 
 	// Re-verify vertical at refined X to handle off-center initial hits.
 	if ixRef != ix {
-		if vc2, vt2, vs2, ok2 := crossCheckAxis(bm, ixRef, iyRef, 0, 1, maxScan, estimatedModuleSize, tryHarder); ok2 {
+		if vc2, vt2, vs2, ok2 := crossCheckAxis(bm, ixRef, iyRef, 0, 1, maxScan, estimatedModuleSize, tryHarder, openOuter); ok2 {
 			vCenter, vTotal, vScore = vc2, vt2, vs2
 		}
 	}
@@ -349,8 +359,8 @@ func locateConcentricCore(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize f
 	// Diagonal cross-checks (+1,+1) and (+1,-1). Pass 0 for estTotalOrMS so rotated
 	// 45-degree finder squares (where diagonal runs are shorter than HV runs) are not rejected.
 	diagMaxScan := int(math.Ceil(float64(maxScan) * 1.45))
-	_, d1Total, d1Score, ok1 := crossCheckAxis(bm, ixRef, iyRef, 1, 1, diagMaxScan, 0, tryHarder)
-	_, d2Total, d2Score, ok2 := crossCheckAxis(bm, ixRef, iyRef, 1, -1, diagMaxScan, 0, tryHarder)
+	_, d1Total, d1Score, ok1 := crossCheckAxis(bm, ixRef, iyRef, 1, 1, diagMaxScan, 0, tryHarder, openOuter)
+	_, d2Total, d2Score, ok2 := crossCheckAxis(bm, ixRef, iyRef, 1, -1, diagMaxScan, 0, tryHarder, openOuter)
 
 	hvAvg := (hTotal + vTotal) * 0.5
 	if ok1 && (d1Total < 0.35*hvAvg || d1Total > 1.95*hvAvg) {
@@ -411,7 +421,7 @@ func locateConcentricCore(bm *imageproc.BitMatrix, cx, cy, estimatedModuleSize f
 	}, true
 }
 
-func crossCheckAxis(bm *imageproc.BitMatrix, startX, startY, dx, dy, maxCount int, estTotalOrMS float64, tryHarder bool) (centerCoord float64, totalLen float64, score float64, ok bool) {
+func crossCheckAxis(bm *imageproc.BitMatrix, startX, startY, dx, dy, maxCount int, estTotalOrMS float64, tryHarder, openOuter bool) (centerCoord float64, totalLen float64, score float64, ok bool) {
 	if !bm.Get(startX, startY) {
 		return 0, 0, 0, false
 	}
@@ -480,6 +490,10 @@ func crossCheckAxis(bm *imageproc.BitMatrix, startX, startY, dx, dy, maxCount in
 		return 0, 0, 0, false
 	}
 
+	physicalOuter := counts[4]
+	if openOuter {
+		counts = limitOuterRuns(counts)
+	}
 	score, ok = matchFinderRatio(counts, tryHarder)
 	if !ok {
 		return 0, 0, 0, false
@@ -496,7 +510,7 @@ func crossCheckAxis(bm *imageproc.BitMatrix, startX, startY, dx, dy, maxCount in
 
 	// Compute center coordinate along the primary axis (x if dx != 0, else y).
 	endX, endY := x, y
-	centerStepOffset := float64(counts[4]+counts[3]) + float64(counts[2])*0.5
+	centerStepOffset := float64(physicalOuter+counts[3]) + float64(counts[2])*0.5
 	if dx != 0 {
 		centerCoord = float64(endX) - float64(dx)*centerStepOffset
 		if dx > 0 {
@@ -795,4 +809,12 @@ func distSq(a, b geom.PointF) float64 {
 
 func dist(a, b geom.PointF) float64 {
 	return math.Hypot(a.X-b.X, a.Y-b.Y)
+}
+
+// A merged exterior can extend either black run past the intact white ring.
+func limitOuterRuns(c [5]int) [5]int {
+	width := (c[1] + c[3] + 1) / 2
+	c[0] = min(c[0], width)
+	c[4] = min(c[4], width)
+	return c
 }

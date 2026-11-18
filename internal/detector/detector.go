@@ -48,7 +48,40 @@ func DetectAndDecode(gray *imageproc.GrayImage, opts Options) []Result {
 		}
 	}
 
-	return runCascade(gray, opts, 0)
+	results := runCascade(gray, opts, 0)
+	if hasDecoded(results) {
+		return results
+	}
+	// A uniform frame cannot contain a finder.
+	varied := false
+	for _, v := range gray.Pix {
+		if v != gray.Pix[0] {
+			varied = true
+			break
+		}
+	}
+	if !varied {
+		return results
+	}
+	bm := imageproc.GlobalOtsuBinarizer(gray)
+	for _, inverted := range []bool{false, true} {
+		if inverted {
+			bm.Invert()
+		}
+		pats := scanFinderPatterns(bm, false, false, true)
+		if len(pats) < 3 {
+			continue
+		}
+		g := gray
+		if inverted {
+			g = gray.Invert()
+		}
+		dec, _, _, _, _, _, _ := processPatternsOnBitMatrixDetail(g, bm, nil, pats, 1, 1, 0, opts, nil, false, false, nil, true)
+		if hasDecoded(dec) {
+			return trimResults(dec, opts)
+		}
+	}
+	return results
 }
 
 // DetectAndDecodeImage converts img to luminance before detection.

@@ -94,3 +94,12 @@ func TestDecodeNilAndBlank(t *testing.T) {
 		t.Fatalf("expected 0 results on noise dot, got %d", len(all))
 	}
 }
+
+func TestIssue1(t *testing.T) {
+	for _, opts := range []*Options{nil, {Multi: true}} {
+		res, err := DecodeFile("testdata/issue1.png", opts)
+		if err != nil || len(res) != 1 || res[0].Text != "https://example.com" {
+			t.Fatalf("opts=%+v results=%+v err=%v", opts, res, err)
+		}
+	}
+}
