@@ -9,7 +9,7 @@ qore は、高速で外部依存のない Go 製 QR コードリーダーです�
 | プラットフォーム | ダウンロード | バージョン |
 | --- | --- | --- |
 | Go とデスクトップ CLI | [qore リリース](https://github.com/firesh/qcore/releases/tag/v1.0.1) | v1.0.1 |
-| Android と iOS | [モバイル SDK](https://github.com/firesh/qcore-mobile/releases/tag/v1.0.0) | v1.0.0 · コア v1.0.0 |
+| Android と iOS | [モバイル SDK](https://github.com/firesh/qcore-mobile/releases/tag/v1.0.1) | v1.0.1 · コア v1.0.1 |
 
 ## クイックスタート
 

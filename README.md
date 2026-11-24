@@ -9,7 +9,7 @@ qore is a fast, dependency-free QR code reader for Go. It detects and decodes mu
 | Platform | Package | Version |
 | --- | --- | --- |
 | Go and desktop CLI | [qore release](https://github.com/firesh/qcore/releases/tag/v1.0.1) | v1.0.1 |
-| Android and iOS | [Mobile SDK](https://github.com/firesh/qcore-mobile/releases/tag/v1.0.0) | v1.0.0 · core v1.0.0 |
+| Android and iOS | [Mobile SDK](https://github.com/firesh/qcore-mobile/releases/tag/v1.0.1) | v1.0.1 · core v1.0.1 |
 
 ## Quick start
 
